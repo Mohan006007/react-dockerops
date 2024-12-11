@@ -1,58 +1,26 @@
-import React, { Component } from "react";
-// import logo from './logo.svg';
-import "./App.css";
-import { Table } from "react-bootstrap";
+import React from "react";
+import "./App.css"; // Import custom styles
 
-import "bootstrap/dist/css/bootstrap.min.css";
-
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      error: null,
-      users: [],
-    };
-  }
-
-  componentDidMount() {
-    const url = "http://localhost:5000/users";
-    fetch(url)
-      .then((response) => response.json())
-      .then((result) => {
-        this.setState({
-          users: result,
-        });
-      })
-      .catch((err) => console.log(err));
-  }
-
-  render() {
-    const { error, users } = this.state;
-    if (error) {
-      return <div>Error: {error}</div>;
-    } else {
-      return (
-        <div className="App">
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Name</th>
-              </tr>
-            </thead>
-            <tbody>
-              {users.map((user) => (
-                <tr key={user.id}>
-                  <td>{user.id}</td>
-                  <td>{user.name}</td>
-                </tr>
-              ))}
-            </tbody>
-          </Table>
+function App() {
+  return (
+    <div style={{ textAlign: "center", backgroundColor: "#222", color: "white", height: "100vh" }}>
+      <header style={{ padding: "20px" }}>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+          alt="React Logo"
+          style={{ width: "100px" }}
+        />
+        <h1>Most famous DevOps Tools:</h1>
+        <div style={{ marginTop: "20px" }}>
+          <a href="https://git-scm.com/" style={{ color: "blue", margin: "0 15px" }}>Git</a>
+          <a href="https://www.jenkins.io/" style={{ color: "blue", margin: "0 15px" }}>Jenkins</a>
+          <a href="https://www.docker.com/" style={{ color: "blue", margin: "0 15px" }}>Docker</a>
+          <a href="https://kubernetes.io/" style={{ color: "blue", margin: "0 15px" }}>Kubernetes</a>
         </div>
-      );
-    }
-  }
+      </header>
+    </div>
+  );
 }
 
 export default App;
+
