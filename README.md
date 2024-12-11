@@ -1,21 +1,24 @@
-<<<<<<< HEAD
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React DockerOps
 
-## Available Scripts
+This project demonstrates how to deploy a React application using Docker, set up CI/CD pipelines with Jenkins, and automate deployment to Docker Hub. The setup ensures that the React app can be easily built, tested, and deployed in a containerized environment.
+
+## Project Setup
+
+The project is bootstrapped with [Create React App](https://github.com/facebook/create-react-app) to quickly get started with React development. 
+
+### Available Scripts
 
 In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
+Runs the app in development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
+Launches the test runner in interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
@@ -23,20 +26,21 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
+The build is minified and the filenames include hashes.<br />
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Note:** This is a one-way operation. Once you `eject`, you can’t go back!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you aren't satisfied with the default build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project and copy all configuration files and transitive dependencies (webpack, Babel, ESLint, etc.) into your project for full control.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Deployment
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+This repository also demonstrates how to deploy the application using Docker, set up a Continuous Integration (CI) pipeline with Jenkins, and automate the deployment to Docker Hub.
+
+- Docker ensures the application is containerized and ready for deployment in any environment.
+- Jenkins is configured for CI/CD automation, ensuring that updates are deployed smoothly and efficiently.
 
 ## Learn More
 
@@ -44,30 +48,10 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+For more details on the Docker and Jenkins setup, refer to the respective official docs:
+- [Docker Documentation](https://docs.docker.com/)
+- [Jenkins Documentation](https://www.jenkins.io/doc/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## License
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-=======
-# react-dockerops
-Deploying a React application using Docker, set up CI/CD pipelines with Jenkins, and automate deployment to Docker Hub
->>>>>>> 6707bb90d3dcbeb7970c024d170505b6bb530cf7
+This project is licensed under the MIT License.
