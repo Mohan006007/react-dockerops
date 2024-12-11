@@ -117,8 +117,8 @@ Use the build.sh script to:
 - Build the Docker image
 - Push the image to DockerHub
   ```bash
-  git clone https://github.com/Mohan006007/react-dockerops.git
-  cd react-dockerops
+  chmod +x build.sh
+  ./build.sh
   ```
 #### 4. Configure Jenkins Pipeline
 - Set up a Jenkins pipeline by creating a job that uses the provided Jenkinsfile.
