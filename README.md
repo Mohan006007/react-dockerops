@@ -106,7 +106,7 @@ This script will:
 
  Clone the repository to your local machine:
  ```bash
-git clone https://github.com/your-username/react-dockerops.git
+git clone https://github.com/Mohan006007/react-dockerops.git
 cd react-dockerops
 ```
 Since node_modules are already part of the project or will be installed when needed, you don't need to install Node.js manually.
@@ -117,7 +117,7 @@ Use the build.sh script to:
 - Build the Docker image
 - Push the image to DockerHub
   ```bash
-  git clone https://github.com/your-username/react-dockerops.git
+  git clone https://github.com/Mohan006007/react-dockerops.git
   cd react-dockerops
   ```
 #### 4. Configure Jenkins Pipeline
