@@ -68,3 +68,67 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+---
+
+## React DockerOps - CI/CD Pipeline
+
+A streamlined CI/CD pipeline for deploying a React application with Docker, Jenkins, and GitHub Webhooks for automated build and deployment.
+
+---
+
+### Prerequisites
+
+- **AWS EC2 Instance**: Minimum `t2.medium` instance type recommended.
+- **Operating System**: Ubuntu 24.04 (recommended to use Ubuntu 22.04 for error-free operation).
+- **Docker**, **Jenkins**, and **Java (OpenJDK 17)** should be installed.
+
+---
+
+### Setup Instructions
+
+#### 1. Install Prerequisites with `script.sh`
+
+Run the `script.sh` to automatically install all necessary dependencies:
+
+```bash
+chmod +x script.sh
+./script.sh
+```
+
+This script will:
+- Update package lists
+- Install Java 17 (required for Jenkins)
+- Install Docker (for containerization)
+- Install Jenkins (for CI/CD automation)
+- Enable and start the Docker and Jenkins services
+ #### 2. Clone the Repository
+
+ Clone the repository to your local machine:
+ ```bash
+git clone https://github.com/your-username/react-dockerops.git
+cd react-dockerops
+```
+Since node_modules are already part of the project or will be installed when needed, you don't need to install Node.js manually.
+
+#### 3. Build and Push Docker Image with build.sh
+Use the build.sh script to:
+- Login to DockerHub
+- Build the Docker image
+- Push the image to DockerHub
+  ```bash
+  git clone https://github.com/your-username/react-dockerops.git
+  cd react-dockerops
+  ```
+#### 4. Configure Jenkins Pipeline
+- Set up a Jenkins pipeline by creating a job that uses the provided Jenkinsfile.
+- Configure GitHub Webhooks to trigger the Jenkins build automatically when changes are pushed to the repository.
+
+#### 5. Access the React Application
+Once the Docker container is running, access the React app at http://<your-ec2-ip>:80.
+
+#### DockerHub Image
+- Image: mohan006007/react-app
+  
+#### Conclusion
+This setup automates the build and deployment of a React app using Docker and Jenkins, with automatic SCM-triggered builds via GitHub Webhooks. It’s optimized for performance with a minimum t2.medium instance and Ubuntu 22.04 for error-free operation.
