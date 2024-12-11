@@ -124,11 +124,26 @@ Use the build.sh script to:
 - Set up a Jenkins pipeline by creating a job that uses the provided Jenkinsfile.
 - Configure GitHub Webhooks to trigger the Jenkins build automatically when changes are pushed to the repository.
 
-#### 5. Access the React Application
+#### 5. Configure AWS Security Group
+Make sure your EC2 instance's security group is configured to allow the following ports:
+- Port 80: For the React web app
+- Port 8080: For Jenkins (to access the Jenkins dashboard)
+You can add inbound rules to your security group as follows:
+- Port 80 (HTTP): For web traffic to your React app.
+- Port 8080 (Jenkins): To access Jenkins UI and manage pipelines.
+Here’s an example of how to open the ports:
+- Go to the EC2 Dashboard.
+- Select Security Groups under Network & Security.
+- Choose the security group associated with your EC2 instance.
+- Add the following inbound rules:
+- Type: HTTP, Port Range: 80, Source: 0.0.0.0/0 (or restrict to your IP).
+- Type: Custom TCP Rule, Port Range: 8080, Source: 0.0.0.0/0 (or restrict to your IP).
+
+#### 6. Access the React Application
 Once the Docker container is running, access the React app at http://<your-ec2-ip>:80.
 
 #### DockerHub Image
 - Image: mohan006007/react-app
   
 #### Conclusion
-This setup automates the build and deployment of a React app using Docker and Jenkins, with automatic SCM-triggered builds via GitHub Webhooks. It’s optimized for performance with a minimum t2.medium instance and Ubuntu 22.04 for error-free operation.
+This setup automates the build and deployment of a React app using Docker and Jenkins, with automatic SCM-triggered builds via GitHub Webhooks. It’s optimized for performance with a minimum t2.medium instance and Ubuntu 22.04 for error-free operation. Also, the necessary security group ports (80 for React and 8080 for Jenkins) are configured to enable easy access.
